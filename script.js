@@ -7,6 +7,7 @@ textarea.addEventListener('keyup', (e) => {
 
 })
 
+
 function createTag(input) {
 
     const tags = input.split('-').filter(tag => tag.trim() !== "").map(tag => tag.trim())
@@ -18,3 +19,13 @@ function createTag(input) {
         tagsdiv.appendChild(temp)
     })
 }
+
+window.addEventListener('dragstart',(e)=>{
+console.log('dragstart')
+})
+window.addEventListener('dragend',(e)=>{
+console.log('dragend')
+})
+window.addEventListener('dragenter',(e)=>{
+console.log('Entering drag')
+})
